@@ -1,15 +1,19 @@
 <?php
-$servername = "localhost";
+$servername = "mydatabasetest.mysql.database.azure.com";
 $username = "mydbuser1"; // Use your username if created
 $password = "P@ssword1234"; // Replace with your password
 $dbname = "mydatabase";
 
+//Server=;Database=mydatabase;Uid=mydbuser1;Pwd=P@ssword1234;
+
 //
-$connString = getenv('MYSQL_CONN_STRING');
+//$connString = getenv('MYSQL_CONN_STRING');
 
 // Create connection
-//$conn = new mysqli($servername, $username, $password, $dbname);
-$conn = new mysqli($connString);
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+//$conn = new mysqli($connString);
 
 
 // Check connection
