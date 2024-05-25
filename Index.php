@@ -2,7 +2,6 @@
 $conn = mysqli_init();
 $connString = getenv('MYSQL_CONN_STRING');
 
-echo $connString;
 
 // Use $connString to connect to your MySQL database
 $conn = new mysqli($connString);
