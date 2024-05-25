@@ -4,8 +4,13 @@ $username = "mydbuser1"; // Use your username if created
 $password = "P@ssword1234"; // Replace with your password
 $dbname = "mydatabase";
 
+//
+$connString = getenv('MYSQL_CONN_STRING');
+
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($connString);
+
 
 // Check connection
 if ($conn->connect_error) {
